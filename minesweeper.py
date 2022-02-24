@@ -9,8 +9,8 @@ import os
 pygame.font.init()
 
 # Defines the width and height in tiles of the game board
-GAME_WIDTH_TILES = 14
-GAME_HEIGHT_TILES = 14
+GAME_WIDTH_TILES = 10
+GAME_HEIGHT_TILES = 10
 
 # Defines the numbers of mines based on the board size and difficulty
 DIFFICULTY = 1
