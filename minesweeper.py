@@ -309,8 +309,10 @@ def get_grid_cord(x, y):
         cords[1] = (y - GAME_STARTING_HEIGHT) // SIZE_OF_SQUARE
     return cords
 
+
 def draw_single_box(x, y):
     pass
+
 
 def main():
     """Runs minesweeper"""
@@ -354,7 +356,7 @@ def main():
             # Quits game if user exists out
             if event.type == pygame.QUIT:
                 run = False
-                pygame.quit()
+                return False
 
             # Runs when the user clicks their mouse
             if event.type == pygame.MOUSEBUTTONDOWN:
@@ -411,7 +413,12 @@ def main():
             draw_display(num_mines_left, time, smile)
             draw_boxes(user_board)
 
+    return True
+
 
 if __name__ == "__main__":
-    while True:
-        main()
+    continue_game = True
+    while continue_game:
+        continue_game = main()
+    print("Thanks for playing :)")
+    pygame.quit()
